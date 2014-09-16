@@ -1,6 +1,63 @@
 /* Declare and Define the functions here that will make the function calls below work properly */
 
+var first = function(arr, cb){
+  var theName = arr[0];
+  cb(theName);
+}
 
+var last = function(arr, cb){
+  var theName = arr[6];
+  cb(theName);
+
+}
+
+var multiply = function(x, y, cb){
+    var theAnswer = x * y;
+    cb(theAnswer);
+
+}
+
+var contains = function(arr, ind, cb){
+  var found = '';
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] === ind){
+      found = arr[i];
+    }
+
+  }
+  cb(found);
+
+}
+
+var isFound = function(found){
+if(found){
+  console.log(Found + " is in the array");
+} else {
+  console.log(Found + " is not in the array");
+}
+
+}
+contains(names, 'Colt', isFound);
+
+var uniq = function(arr, cb){
+  var newArray = names.reduce(function(a,b){
+    if (a.indexOf(b) < 0 ) a.push(b);
+    return a;
+  },[]);
+  cb(newArray);
+}
+
+var each = function(arr, cb){
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] === )
+  }
+
+}
+
+var find = function(item, indice){
+
+
+}
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
@@ -12,11 +69,15 @@ last(names, function(lastName){
   console.log('The last name in names is ', lastName);
 });
 
-contains('Colt', function(yes){
+multiply(3,4,function(answer){
+  console.log('The answer is ', answer);
+})
+
+contains(names, 'Colt', function(yes){
   if(yes){
     'Colt is in the array';
   } else {
-    'Colt is not in the list';
+    'Colt is not in the list';3
   }
 });
 
