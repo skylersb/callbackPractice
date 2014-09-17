@@ -31,9 +31,9 @@ var contains = function(arr, ind, cb){
 
 var isFound = function(found){
 if(found){
-  console.log(Found + " is in the array");
+  console.log(found + " is in the array");
 } else {
-  console.log(Found + " is not in the array");
+  console.log(found + " is not in the array");
 }
 
 }
